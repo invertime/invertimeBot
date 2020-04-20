@@ -35,4 +35,4 @@ client.on('message', message => {
     });
   }
 });
-client.login("NzAxNzAyNDgwMjg2OTczOTYz.Xp2hBQ.dtxBY2um1JBpkdXkdg6igENxsMg"); //Token (Série de chiffre) propre a chaque Bot
+client.login(process.env.TOKEN); //Token (Série de chiffre) propre a chaque Bot
