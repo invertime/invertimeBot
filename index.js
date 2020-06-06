@@ -1,17 +1,14 @@
-const Discord = require('discord.js'); //Ce que le bot à besoin /
+const Discord = require('discord.js'); 
 const { Client, MessageAttachment } = require('discord.js');
-const client = new Discord.Client(); //Que votre Bot est un nouvel utilisateur
-client.on("ready", () => { //Signifie que le bot à bien démarré 
-    console.log("Ready !"); //Lorsque que le bot est lancé observer la console Visual Studio 
-    client.user.setActivity("Nothing "); //Voir le Jeu sur le Discord
+const client = new Discord.Client(); 
+client.on("ready", () => {  
+    console.log("Ready !"); 
+    client.user.setActivity("Nothing "); 
 });
-var prefix = "!invert"; //Prefix de votre Bot ( *play www.youtube.com/ )
+var prefix = "!invert";
 client.on('message', message => {
-    // If the message is '!rip'
     if (message.content === prefix + " " + "rip") {
-        // Create the attachment using MessageAttachment
         const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
         message.channel.send(`${message.author},`, attachment);
     }
 
@@ -36,4 +33,4 @@ client.on('message', message => {
         });
     }
 });
-client.login("NzAxNzAyNDgwMjg2OTczOTYz.Xp2hBQ.dtxBY2um1JBpkdXkdg6igENxsMg"); //Token (Série de chiffre) propre a chaque Bot
+client.login("yourtokenhere");
